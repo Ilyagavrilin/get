@@ -25,7 +25,7 @@ def main():
         if (val.lower() == 'q'):
             raise Exception
         else:
-            val = int(val)
+            val = float(val)
 
         if (val <= 0):
             raise ValueError("Incorrect range") 
@@ -33,7 +33,11 @@ def main():
             for i in range(0, 256, -1):
                 bin = decimal2binary(i)
                 set_values(dac, bin)
-                time.sleep(val/(256*1000))
+                time.sleep(val/(256*2))
+            for i in range(255, 0, -1):
+                bin = decimal2binary(i)
+                set_values(dac, bin)
+                time.sleep(val/(256*2))
         
          
     except KeyboardInterrupt:
