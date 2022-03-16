@@ -30,7 +30,7 @@ def main():
         if (val <= 0):
             raise ValueError("Incorrect range") 
         while True:
-            for i in range(256):
+            for i in range(0, 256, -1):
                 bin = decimal2binary(i)
                 set_values(dac, bin)
                 time.sleep(val/(256*1000))
