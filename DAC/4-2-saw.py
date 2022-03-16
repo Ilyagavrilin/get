@@ -34,7 +34,7 @@ def main():
                 bin = decimal2binary(i)
                 set_values(dac, bin)
                 time.sleep(val/(256*2))
-            for i in range(0, 256, -1):
+            for i in range(255, 0, -1):
                 bin = decimal2binary(i)
                 set_values(dac, bin)
                 time.sleep(val/(256*2))
