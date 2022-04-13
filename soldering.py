@@ -3,7 +3,7 @@ import random
 
 values = [random.randint(-100, 100) for i in range(20)]
 
-with open("data.txt", 'r') as f:
+with open("data.txt", 'w') as f:
   f.write('\n'.join([str(value) for value in values]))
   
 plt.plot(values)
